@@ -4,6 +4,7 @@
   ],
   "scripts": {
     "build": "wireit",
+    "test": "wireit",
     "format": "prettier \"./packages/*/src/**/*.ts\" --write",
     "check": "wireit"
   },
@@ -22,6 +23,11 @@
       "dependencies": [
         "./packages/tools:build",
         "./packages/validator:build"
+      ]
+    },
+    "test": {
+      "dependencies": [
+        "./packages/tools:test"
       ]
     },
     "check": {

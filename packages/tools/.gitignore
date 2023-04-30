@@ -1,5 +1,7 @@
 /lib/
-/test/
+/test/*
+!/test/test-data/
+
 /index.js
 /index.js.map
 /index.d.ts
