@@ -1,0 +1,33 @@
+{
+  "name": "@webcomponents/custom-elements-manifest-validator",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Validator for custom elements manifest files",
+  "author": "Google LLC",
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "wireit"
+  },
+  "wireit": {
+    "build": {
+      "command": "tsc --pretty",
+      "files": [
+        "tsconfig.json",
+        "../../tsconfig.base.json",
+        "src/**/*.ts"
+      ],
+      "output": [
+        "index.js",
+        "index.js.map",
+        "index.d.ts",
+        "index.d.ts.map",
+        "lib/",
+        "test/",
+        "tsconfig.tsbuildinfo"
+      ],
+      "clean": "if-file-deleted"
+    }
+  }
+}
