@@ -24,7 +24,7 @@ export type CustomElementInfo = {
 
 /**
  * Gets all the custom element exports of a package
- * 
+ *
  * @param pkg The package to search
  * @param packageName The name of the package
  * @param packageVersion The version of the package

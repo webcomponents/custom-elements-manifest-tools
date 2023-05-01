@@ -15,11 +15,11 @@ import {getModule, normalizeModulePath} from './get-module.js';
 /**
  * Resolves a manifest reference from a local package and module into a
  * Declaration object.
- * 
+ *
  * TODO (justinfagnani): The current implementation can only resolve within the
  * local package. To resolve to external packages would require some kind of
  * package registry, which might require this function to be async.
- * 
+ *
  * @param pkg The package to resolve the reference within
  * @param localModule The module to resolve the reference from
  * @param ref The reference to resolve

@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+
 import {readFile} from 'fs/promises';
 import {fileURLToPath} from 'url';
 
