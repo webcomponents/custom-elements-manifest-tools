@@ -8,7 +8,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "build": "wireit"
+    "build": "wireit",
+    "test": "wireit"
   },
   "wireit": {
     "build": {
@@ -25,9 +26,27 @@
         "index.d.ts.map",
         "lib/",
         "test/",
+        "!test/test-data/*",
         "tsconfig.tsbuildinfo"
       ],
       "clean": "if-file-deleted"
+    },
+    "test": {
+      "command": "NODE_OPTIONS='--enable-source-maps' uvu test \"_test\\.js$\"",
+      "dependencies": [
+        "build"
+      ],
+      "files": [
+        "test/test-data/*"
+      ],
+      "output": []
     }
+  },
+  "dependencies": {
+    "custom-elements-manifest": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.3",
+    "uvu": "^0.5.6"
   }
 }
